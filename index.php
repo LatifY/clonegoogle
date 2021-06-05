@@ -14,7 +14,7 @@
     <div class="field">
         <img style="opacity: 0.5; cursor: default;" src="img/search.png" class="search">
 
-        <input maxlength="2048"type="text" autocapitalize="off" autocomplete="off" 
+        <input id="searchBar" maxlength="2048"type="text" autocapitalize="off" autocomplete="off" 
         autocorrect="off" autofocus="" title="Ara" value="" 
         aria-label="Ara">
 
@@ -22,7 +22,7 @@
         <img src="img/mic.png" class="mic">
     </div>
     <div class="buttons">
-            <input type="submit" value="Google Search">
+            <input type="submit" onClick="openPagee()" value="Google Search">
             <a><input type="submit" value="I'm Feeling Lucky"></a>
     </div>
 </div>
@@ -54,4 +54,12 @@
 </div>
 
 </body>
+
+<script>
+	function openPagee(){
+		var url = document.getElementById("searchBar").value;
+		var googleUrl = "https://www.google.com.tr/search?q=" + url
+		window.open(googleUrl, "_self");
+	}
+</script>
 </html>
